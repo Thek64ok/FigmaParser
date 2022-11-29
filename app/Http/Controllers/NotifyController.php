@@ -26,4 +26,16 @@ class NotifyController extends Controller
         ]);
         return view('notify')->with('id', $id['id']);
     }
+
+    protected function delete(Request $request){
+        $inputs = $request->all();
+        if(!empty($inputs['id'])){
+            $deleted = NotifyModel::where('id', $inputs['id'])->delete();
+            if(!empty($deleted))
+                return '';
+            else
+                return 'nice try';
+        }
+            return 'nice try';
+    }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,12 +24,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/start_page', [\App\Http\Controllers\NotifyController::class, 'show'])->middleware('auth');
 
-/*Route::get('/get_notify', function(){
-    ;
-})->name('notify')->middleware('auth');*/
-
-Route::get('/modal', function(){
-    return view('modal');
-})->name('modal')->middleware('auth');
-
 Route::get('/create_notify', [\App\Http\Controllers\NotifyController::class, 'create'])->name('create_notify')->middleware('auth');
+
+Route::get('/delete_notify', [\App\Http\Controllers\NotifyController::class, 'delete'])->name('delete_notify')->middleware('auth');
+
+Route::get('/modal', function(Request $request){
+    $data = $request->all();
+    return view('modal')->with('delete_id', $data['id']);
+})->name('modal')->middleware('auth');

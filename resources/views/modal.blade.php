@@ -12,3 +12,20 @@
         </div>
     </div>
 </div>
+<script>
+    $('.btn-outline-primary').click(function(){
+        $.ajax({
+            url: '{{route('delete_notify')}}',
+            async: false,
+            type: 'get',
+            dataType: 'html',
+            data: {id:{{$delete_id}}},
+            success: function(response){
+                if(response == '')
+                    location.reload();
+                else
+                    alert(response);
+            }
+        })
+    })
+</script>
