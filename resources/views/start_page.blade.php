@@ -36,20 +36,23 @@
                     <h4 class="my-0 fw-normal">Создать уведомление</h4>
                 </div>
                 <div class="card-body">
-                    <img onclick="get_notify();" src="{{asset('storage/plus.png')}}" height="144" width="144" style="opacity: 0.3">
+                    <img onclick="get_notify({{Auth::user()->id}});" src="{{asset('storage/plus.png')}}" height="144" width="144" style="opacity: 0.3">
                 </div>
             </div>
         </div>
+        {!! $html !!}
     </div>
     <div id="modal"></div>
 @endsection
 @section('script')
     <script>
-        function get_notify(){
+        function get_notify(id){
             $.ajax({
-                url: '{{route('notify')}}',
+                url: '{{route('create_notify')}}',
                 async:false,
                 type: 'GET',
+                dataType: 'html',
+                data: {id:id},
                 success: function(response){
                     $('.mrg_t').append(response);
                 }
