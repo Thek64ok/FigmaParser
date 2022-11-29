@@ -5,7 +5,7 @@
             <h5 class="my-0 fw-normal" style="text-align: center">Название</h5>
         </div>
         <div class="card-body footer">
-            <img src="{{asset('storage/pause.png')}}" width="40" height="40" class="button-r">
+            <img src="{{asset('storage/pause.png')}}" width="64" height="64" class="button-r">
             <img src="{{asset('storage/start.png')}}" width="40" height="40" class="button-r">
         </div>
     </div>

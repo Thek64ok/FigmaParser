@@ -23,12 +23,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/start_page', function(){
     return view('start_page');
-});
+})->middleware('auth');
 
 Route::get('/get_notify', function(){
     return view('notify');
-})->name('notify');
+})->name('notify')->middleware('auth');
 
 Route::get('/modal', function(){
     return view('modal');
-})->name('modal');
+})->name('modal')->middleware('auth');
