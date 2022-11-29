@@ -19,9 +19,16 @@
             opacity: 0.3;
             cursor: pointer;
         }
+        .mrg{
+            padding-right: -3%;
+            padding-top: -3%;
+        }
     </style>
 @endsection
 @section('content')
+    <div>
+        <img src="{{asset('storage/settings.png')}}" width="32" height="32" class="button-r mrg" >
+    </div>
     <div class="row row-cols-1 row-cols-md-4 mb-3 text-center mrg_t">
         <div class="col">
             <div class="card mb-4 rounded-3 shadow-sm st-height" style="background-color: black; color: white">

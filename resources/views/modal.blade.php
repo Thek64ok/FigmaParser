@@ -5,7 +5,6 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 <h1 class="fs-5" style="text-align: center; color: white; font-size: 11px" id="staticBackdropLabel">Вы точно хотите удалить?</h1>
             </div>
-
             <div style="text-align: center; padding-bottom: 4%" class="d-grid gap-2 d-md-block">
                 <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal">Нет</button>
                 <button type="button" class="btn btn-outline-primary btn-lg">Да</button>
