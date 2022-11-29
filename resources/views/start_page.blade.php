@@ -20,14 +20,14 @@
             cursor: pointer;
         }
         .mrg{
-            padding-right: -3%;
-            padding-top: -3%;
+            margin-left: 1%;
+            margin-top: 1%;
         }
     </style>
 @endsection
 @section('content')
     <div>
-        <img src="{{asset('storage/settings.png')}}" width="32" height="32" class="button-r mrg" >
+        <a href="{{route('settings')}}"><img src="{{asset('storage/settings.png')}}" width="32" height="32" class="button-r mrg"></a>
     </div>
     <div class="row row-cols-1 row-cols-md-4 mb-3 text-center mrg_t">
         <div class="col">

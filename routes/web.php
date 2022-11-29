@@ -32,3 +32,5 @@ Route::get('/modal', function(Request $request){
     $data = $request->all();
     return view('modal')->with('delete_id', $data['id']);
 })->name('modal')->middleware('auth');
+
+Route::get('/settings', [\App\Http\Controllers\SettingsController::class, 'show'])->name('settings')->middleware('auth');
