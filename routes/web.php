@@ -28,3 +28,7 @@ Route::get('/start_page', function(){
 Route::get('/get_notify', function(){
     return view('notify');
 })->name('notify');
+
+Route::get('/modal', function(){
+    return view('modal');
+})->name('modal');

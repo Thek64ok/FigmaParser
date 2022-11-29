@@ -34,6 +34,7 @@
             </div>
         </div>
     </div>
+    <div id="modal"></div>
 @endsection
 @section('script')
     <script>
@@ -44,6 +45,22 @@
                 type: 'GET',
                 success: function(response){
                     $('.mrg_t').append(response);
+                }
+            })
+        }
+        function deleteNotify(id){
+            $.ajax({
+                url: '{{route('modal')}}',
+                async:false,
+                type: 'GET',
+                dataType: 'html',
+                data: {id: id},
+                success: function(response){
+                    $('#modal').html(response);
+                    let modal = new bootstrap.Modal('#staticBackdrop', {
+                        keyboard: false
+                    });
+                    modal.show();
                 }
             })
         }
