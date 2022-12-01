@@ -34,3 +34,5 @@ Route::get('/modal', function(Request $request){
 })->name('modal')->middleware('auth');
 
 Route::get('/settings', [\App\Http\Controllers\SettingsController::class, 'show'])->name('settings')->middleware('auth');
+
+Route::post('settings_save', [\App\Http\Controllers\SettingsController::class, 'save'])->name('settings_save')->middleware('auth');

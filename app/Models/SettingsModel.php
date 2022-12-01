@@ -24,5 +24,6 @@ class SettingsModel extends Model
         'text_olx',
         'check_fb',
         'text_fb',
+        'notify_from',
     ];
 }
