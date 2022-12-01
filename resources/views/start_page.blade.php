@@ -28,6 +28,7 @@
 @section('content')
     <div>
         <a href="{{route('settings')}}"><img src="{{asset('storage/settings.png')}}" width="32" height="32" class="button-r mrg"></a>
+        <a href="{{route('logout_s')}}"><img src="{{asset('storage/leave.png')}}" width="32" height="32" class="button-r mrg"></a>
     </div>
     <div class="row row-cols-1 row-cols-md-4 mb-3 text-center mrg_t">
         <div class="col">
